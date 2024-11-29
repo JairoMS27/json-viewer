@@ -1,86 +1,88 @@
 # JSON Viewer
 
-A modern and beautiful JSON viewer and formatter built with Next.js and Tailwind CSS. View, edit, and format JSON with syntax highlighting and a simplified view.
+A modern web application for viewing and formatting JSON, built with Next.js 14 and React 18.
 
-![JSON Viewer Screenshot](public/screenshot.png)
+## 🚀 Key Technologies
 
-## Features
+- Next.js ^14.2.18
+- React ^18.2.0
+- Monaco Editor ^4.6.0
+- Lucide React ^0.294.0
+- TailwindCSS ^3.3.0
 
-- 🎨 **Beautiful Syntax Highlighting**: Color-coded JSON for better readability
-- 👀 **Simplified View**: A clean, easy-to-read view of your JSON data
-- 🌓 **Dark/Light Mode**: Switch between themes for comfortable viewing
-- 🌍 **Multi-language Support**: Available in:
-  - English
-  - Spanish
-  - French
-  - German
-  - Portuguese
-- 📝 **JSON Formatting**: Automatically format and validate your JSON
-- 📤 **Export**: Save your formatted JSON to a file
-- 📁 **File Upload**: Drag & drop or select JSON files to load
-- 🧹 **Clear Function**: Easily clear the editor content
+## ✨ Features
 
-## Technologies Used
+- 🎨 Modern and responsive interface
+- 📝 Monaco code editor integration
+- 🔍 Automatic JSON formatting
+- 🌙 Dark/Light mode support
+- ⚡ Performance optimized
+- 🔒 Secure by default
+- 📱 Mobile friendly
 
-- [Next.js 15](https://nextjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Shadcn/ui](https://ui.shadcn.com/)
-- [TypeScript](https://www.typescriptlang.org/)
+## 🛠️ Prerequisites
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18+ 
+- Node.js >= 18.0.0
 - npm or yarn
 
-### Installation
+## 🚀 Quick Start
 
-1. Clone the repository:
 ```bash
-git clone https://github.com/JairoMS27/json-viewer.git
-cd json-viewer
-```
+# Clone the repository
+git clone [repository-url]
 
-2. Install dependencies:
-```bash
+# Install dependencies
 npm install
-# or
-yarn install
-```
 
-3. Run the development server:
-```bash
+# Start development server
 npm run dev
-# or
-yarn dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit `http://localhost:3000` to see the app running.
 
-## Usage
+## 🌐 Netlify Deployment
 
-1. **Input JSON**: 
-   - Paste your JSON directly into the editor
-   - Click the upload button to select a JSON file
-   - Drag & drop a JSON file directly into the editor
+This project is optimized for Netlify deployment with performance best practices.
 
-2. **Format**: Click the "Format JSON" button to automatically format your JSON
-3. **View**: See the formatted JSON with syntax highlighting on the left and a simplified view on the right
-4. **Export**: Click "Export JSON" to save your formatted JSON to a file
-5. **Theme**: Toggle between light and dark mode using the theme switcher
-6. **Language**: Select your preferred language from the language dropdown
+1. **Project Preparation**
+   - Ensure your project is in a Git repository (GitHub, GitLab, etc.)
+   - Project is configured for static builds with `output: 'standalone'`
 
-## License
+2. **Netlify Setup**
+   - Connect your repository to Netlify
+   - Build settings will be automatically configured via `netlify.toml`
+   - Default configuration includes:
+     - Build command: `npm run build`
+     - Publish directory: `.next`
+     - Optimized caching
+     - Asset compression
+     - Security headers
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## 📜 Available Scripts
 
-## Author
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run linter
 
-- [@JairoMS27](https://github.com/JairoMS27)
+## ⚡ Performance Optimizations
 
-## Acknowledgments
+- Aggressive caching strategies
+- Automatic image optimization
+- JS and CSS minification
+- Static asset compression
+- Security headers
+- SEO optimizations
 
-- Built with [Next.js](https://nextjs.org/)
-- UI components from [Shadcn/ui](https://ui.shadcn.com/)
-- Icons from [Lucide](https://lucide.dev/)
+## 🔒 Security Features
+
+- XSS protection
+- Content Security Policy
+- Strict MIME type checking
+- Frame protection
+- Referrer Policy
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
