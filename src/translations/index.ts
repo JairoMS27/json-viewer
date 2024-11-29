@@ -9,6 +9,11 @@ export const translations = {
     format: "Formatear JSON",
     clear: "Limpiar",
     uploadJson: "Subir archivo JSON",
+    footer: {
+      built: "Hecho con",
+      by: "por",
+      poweredBy: "Desarrollado con"
+    },
     theme: {
       light: "Tema Claro",
       dark: "Tema Oscuro"
@@ -24,6 +29,11 @@ export const translations = {
     format: "Format JSON",
     clear: "Clear",
     uploadJson: "Upload JSON file",
+    footer: {
+      built: "Built with",
+      by: "by",
+      poweredBy: "Powered by"
+    },
     theme: {
       light: "Light Theme",
       dark: "Dark Theme"
@@ -39,6 +49,11 @@ export const translations = {
     format: "Formater JSON",
     clear: "Effacer",
     uploadJson: "Télécharger fichier JSON",
+    footer: {
+      built: "Créé avec",
+      by: "par",
+      poweredBy: "Propulsé par"
+    },
     theme: {
       light: "Thème clair",
       dark: "Thème sombre"
@@ -54,6 +69,11 @@ export const translations = {
     format: "JSON formatieren",
     clear: "Löschen",
     uploadJson: "JSON-Datei hochladen",
+    footer: {
+      built: "Erstellt mit",
+      by: "von",
+      poweredBy: "Unterstützt von"
+    },
     theme: {
       light: "Helles Theme",
       dark: "Dunkles Theme"
@@ -69,6 +89,11 @@ export const translations = {
     format: "Formatar JSON",
     clear: "Limpar",
     uploadJson: "Carregar arquivo JSON",
+    footer: {
+      built: "Feito com",
+      by: "por",
+      poweredBy: "Desenvolvido com"
+    },
     theme: {
       light: "Tema Claro",
       dark: "Tema Escuro"

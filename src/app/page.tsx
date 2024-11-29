@@ -18,11 +18,26 @@ export default function Home() {
   const [jsonInput, setJsonInput] = useState("");
   const [parsedJson, setParsedJson] = useState<any>(null);
   const [error, setError] = useState<string | null>(null);
-  const [language, setLanguage] = useState("en");
   const [isDark, setIsDark] = useState(false);
   const [fileName, setFileName] = useState<string>("");
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const [language, setLanguage] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const storedLanguage = localStorage.getItem('language')
+      const browserLanguage = navigator.language.split('-')[0]
+      const supportedLanguages = ['en', 'es', 'fr', 'de', 'pt']
+      
+      return storedLanguage || 
+        (supportedLanguages.includes(browserLanguage) ? browserLanguage : 'en')
+    }
+    return 'en'
+  });
+
+  useEffect(() => {
+    localStorage.setItem('language', language)
+  }, [language]);
 
   const t = translations[language as keyof typeof translations];
 
@@ -226,7 +241,7 @@ export default function Home() {
           </div>
         </Card>
       </div>
-      <Footer />
+      <Footer language={language} />
     </main>
   );
 }
