@@ -22,7 +22,7 @@ A modern and beautiful JSON viewer and formatter built with Next.js and Tailwind
 
 ## Technologies Used
 
-- [Next.js 14](https://nextjs.org/)
+- [Next.js 15](https://nextjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Shadcn/ui](https://ui.shadcn.com/)
 - [TypeScript](https://www.typescriptlang.org/)
