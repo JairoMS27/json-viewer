@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# JSON Viewer
+
+A modern and beautiful JSON viewer and formatter built with Next.js and Tailwind CSS. View, edit, and format JSON with syntax highlighting and a simplified view.
+
+![JSON Viewer Screenshot](public/screenshot.png)
+
+## Features
+
+- 🎨 **Beautiful Syntax Highlighting**: Color-coded JSON for better readability
+- 👀 **Simplified View**: A clean, easy-to-read view of your JSON data
+- 🌓 **Dark/Light Mode**: Switch between themes for comfortable viewing
+- 🌍 **Multi-language Support**: Available in:
+  - English
+  - Spanish
+  - French
+  - German
+  - Portuguese
+- 📝 **JSON Formatting**: Automatically format and validate your JSON
+- 📤 **Export**: Save your formatted JSON to a file
+- 📁 **File Upload**: Drag & drop or select JSON files to load
+- 🧹 **Clear Function**: Easily clear the editor content
+
+## Technologies Used
+
+- [Next.js 14](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Shadcn/ui](https://ui.shadcn.com/)
+- [TypeScript](https://www.typescriptlang.org/)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+\`\`\`bash
+git clone https://github.com/JairoMS27/json-viewer.git
+cd json-viewer
+\`\`\`
+
+2. Install dependencies:
+\`\`\`bash
+npm install
+# or
+yarn install
+\`\`\`
+
+3. Run the development server:
+\`\`\`bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+\`\`\`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Input JSON**: Either paste your JSON directly into the editor or use the upload button to load a JSON file
+2. **Format**: Click the "Format JSON" button to automatically format your JSON
+3. **View**: See the formatted JSON with syntax highlighting on the left and a simplified view on the right
+4. **Export**: Click "Export JSON" to save your formatted JSON to a file
+5. **Theme**: Toggle between light and dark mode using the theme switcher
+6. **Language**: Select your preferred language from the language dropdown
 
-## Learn More
+## Contributing
 
-To learn more about Next.js, take a look at the following resources:
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Deploy on Vercel
+## Author
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [@JairoMS27](https://github.com/JairoMS27)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Acknowledgments
+
+- Built with [Next.js](https://nextjs.org/)
+- UI components from [Shadcn/ui](https://ui.shadcn.com/)
+- Icons from [Lucide](https://lucide.dev/)
