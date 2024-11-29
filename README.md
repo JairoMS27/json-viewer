@@ -37,30 +37,34 @@ A modern and beautiful JSON viewer and formatter built with Next.js and Tailwind
 ### Installation
 
 1. Clone the repository:
-\`\`\`bash
+```bash
 git clone https://github.com/JairoMS27/json-viewer.git
 cd json-viewer
-\`\`\`
+```
 
 2. Install dependencies:
-\`\`\`bash
+```bash
 npm install
 # or
 yarn install
-\`\`\`
+```
 
 3. Run the development server:
-\`\`\`bash
+```bash
 npm run dev
 # or
 yarn dev
-\`\`\`
+```
 
 4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Usage
 
-1. **Input JSON**: Either paste your JSON directly into the editor or use the upload button to load a JSON file
+1. **Input JSON**: 
+   - Paste your JSON directly into the editor
+   - Click the upload button to select a JSON file
+   - Drag & drop a JSON file directly into the editor
+
 2. **Format**: Click the "Format JSON" button to automatically format your JSON
 3. **View**: See the formatted JSON with syntax highlighting on the left and a simplified view on the right
 4. **Export**: Click "Export JSON" to save your formatted JSON to a file

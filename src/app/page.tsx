@@ -21,6 +21,7 @@ export default function Home() {
   const [language, setLanguage] = useState("en");
   const [isDark, setIsDark] = useState(false);
   const [fileName, setFileName] = useState<string>("");
+  const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const t = translations[language as keyof typeof translations];
@@ -51,10 +52,12 @@ export default function Home() {
     }
   };
 
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-
+  const processFile = (file: File) => {
+    if (!file || !file.name.toLowerCase().endsWith(".json")) {
+      setError("Please upload a JSON file");
+      return;
+    }
+    
     setFileName(file.name);
     const reader = new FileReader();
     reader.onload = (e) => {
@@ -71,6 +74,33 @@ export default function Home() {
       }
     };
     reader.readAsText(file);
+  };
+
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      processFile(file);
+    }
+  };
+
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(true);
+  };
+
+  const handleDragLeave = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(false);
+  };
+
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(false);
+    
+    const file = e.dataTransfer.files?.[0];
+    if (file) {
+      processFile(file);
+    }
   };
 
   const formatJson = () => {
@@ -121,7 +151,14 @@ export default function Home() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-4">
-          <Card className="p-4 dark:bg-[#1E1E1E]">
+          <Card
+            className={`p-4 dark:bg-[#1E1E1E] ${
+              isDragging ? "ring-2 ring-blue-500" : ""
+            }`}
+            onDragOver={handleDragOver}
+            onDragLeave={handleDragLeave}
+            onDrop={handleDrop}
+          >
             <div className="flex gap-2 mb-4">
               <input
                 type="file"
