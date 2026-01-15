@@ -229,24 +229,24 @@ export default function Home() {
   }, [parsedJson, t.characters, t.keys]);
 
   return (
-    <main className={`min-h-screen ${isDark ? "dark bg-gray-900" : "bg-gray-50"}`}>
+    <main className={`min-h-screen ${isDark ? "dark bg-black" : "bg-white"}`}>
       <div className="container mx-auto p-4 max-w-7xl">
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <div className="flex items-center gap-3">
             <div
               className={`p-2 rounded-lg ${
-                isDark ? "bg-blue-500/20" : "bg-blue-100"
+                isDark ? "bg-white/10" : "bg-black/10"
               }`}
             >
               <FileJson
-                className={`w-6 h-6 ${isDark ? "text-blue-400" : "text-blue-600"}`}
+                className={`w-6 h-6 ${isDark ? "text-white" : "text-black"}`}
               />
             </div>
             <div>
               <h1
                 className={`text-2xl font-bold ${
-                  isDark ? "text-white" : "text-gray-900"
+                  isDark ? "text-white" : "text-black"
                 }`}
               >
                 {t.title}
@@ -254,7 +254,7 @@ export default function Home() {
               {fileName && (
                 <p
                   className={`text-sm ${
-                    isDark ? "text-gray-400" : "text-gray-500"
+                    isDark ? "text-neutral-400" : "text-neutral-500"
                   }`}
                 >
                   {fileName}
@@ -267,8 +267,8 @@ export default function Home() {
               <span
                 className={`px-2 py-1 text-xs rounded-full ${
                   isDark
-                    ? "bg-amber-500/20 text-amber-400"
-                    : "bg-amber-100 text-amber-600"
+                    ? "bg-white/20 text-white"
+                    : "bg-black/10 text-black"
                 }`}
               >
                 {t.unsavedChanges || "Modified"}
@@ -289,8 +289,8 @@ export default function Home() {
           <div className="space-y-4">
             <Card
               className={`p-4 ${
-                isDark ? "bg-[#1E1E1E] border-gray-700" : "bg-white border-gray-200"
-              } ${isDragging ? "ring-2 ring-blue-500 ring-offset-2" : ""}`}
+                isDark ? "bg-black border-neutral-800" : "bg-white border-neutral-200"
+              } ${isDragging ? "ring-2 ring-neutral-500 ring-offset-2" : ""}`}
               onDragOver={handleDragOver}
               onDragLeave={handleDragLeave}
               onDrop={handleDrop}
@@ -309,8 +309,8 @@ export default function Home() {
                   onClick={() => fileInputRef.current?.click()}
                   className={`flex-1 ${
                     isDark
-                      ? "bg-gray-800 text-gray-100 hover:bg-gray-700 border-gray-700"
-                      : "bg-white text-gray-700 hover:bg-gray-50 border-gray-300"
+                      ? "bg-black text-white hover:bg-neutral-900 border-neutral-700"
+                      : "bg-white text-black hover:bg-neutral-100 border-neutral-300"
                   }`}
                 >
                   <Upload className="mr-2 h-4 w-4" />
@@ -327,16 +327,16 @@ export default function Home() {
                   placeholder={t.placeholder}
                   className={`min-h-[400px] font-mono text-sm resize-none p-3 ${
                     isDark
-                      ? "bg-[#1E1E1E] text-[#CE9178] border-gray-700 placeholder:text-gray-600"
-                      : "bg-white text-emerald-700 border-gray-300 placeholder:text-gray-400"
+                      ? "bg-black text-white border-neutral-700 placeholder:text-neutral-600"
+                      : "bg-white text-black border-neutral-300 placeholder:text-neutral-400"
                   } ${error ? "border-red-500 focus:ring-red-500" : ""}`}
                 />
                 {getStatsText() && (
                   <div
                     className={`absolute bottom-2 right-2 text-xs px-2 py-1 rounded ${
                       isDark
-                        ? "bg-gray-800 text-gray-400"
-                        : "bg-gray-100 text-gray-500"
+                        ? "bg-neutral-900 text-neutral-400"
+                        : "bg-neutral-100 text-neutral-500"
                     }`}
                   >
                     {getStatsText()}
@@ -365,8 +365,8 @@ export default function Home() {
                 disabled={!jsonInput.trim()}
                 className={`${
                   isDark
-                    ? "bg-blue-600 hover:bg-blue-700 text-white"
-                    : "bg-blue-500 hover:bg-blue-600 text-white"
+                    ? "bg-white hover:bg-neutral-200 text-black"
+                    : "bg-black hover:bg-neutral-800 text-white"
                 } disabled:opacity-50`}
               >
                 <Wand2 className="mr-2 h-4 w-4" />
@@ -378,8 +378,8 @@ export default function Home() {
                 variant="outline"
                 className={`${
                   isDark
-                    ? "bg-gray-800 text-gray-100 hover:bg-gray-700 border-gray-700"
-                    : "bg-white text-gray-700 hover:bg-gray-50 border-gray-300"
+                    ? "bg-black text-white hover:bg-neutral-900 border-neutral-700"
+                    : "bg-white text-black hover:bg-neutral-100 border-neutral-300"
                 } disabled:opacity-50`}
               >
                 {t.minify || "Minify"}
@@ -390,8 +390,8 @@ export default function Home() {
                 variant="outline"
                 className={`${
                   isDark
-                    ? "bg-gray-800 text-gray-100 hover:bg-gray-700 border-gray-700"
-                    : "bg-white text-gray-700 hover:bg-gray-50 border-gray-300"
+                    ? "bg-black text-white hover:bg-neutral-900 border-neutral-700"
+                    : "bg-white text-black hover:bg-neutral-100 border-neutral-300"
                 } disabled:opacity-50`}
               >
                 {copied ? (
@@ -407,8 +407,8 @@ export default function Home() {
                 variant="outline"
                 className={`${
                   isDark
-                    ? "bg-gray-800 text-gray-100 hover:bg-gray-700 border-gray-700"
-                    : "bg-white text-gray-700 hover:bg-gray-50 border-gray-300"
+                    ? "bg-black text-white hover:bg-neutral-900 border-neutral-700"
+                    : "bg-white text-black hover:bg-neutral-100 border-neutral-300"
                 } disabled:opacity-50`}
               >
                 <Download className="mr-2 h-4 w-4" />
@@ -420,8 +420,8 @@ export default function Home() {
                 variant="outline"
                 className={`${
                   isDark
-                    ? "bg-gray-800 text-red-400 hover:bg-gray-700 border-gray-700"
-                    : "bg-white text-red-500 hover:bg-red-50 border-gray-300"
+                    ? "bg-black text-red-400 hover:bg-neutral-900 border-neutral-700"
+                    : "bg-white text-red-500 hover:bg-red-50 border-neutral-300"
                 } disabled:opacity-50`}
               >
                 <Trash2 className="mr-2 h-4 w-4" />
@@ -433,13 +433,13 @@ export default function Home() {
           {/* Right panel - Preview */}
           <Card
             className={`p-4 overflow-auto max-h-[600px] ${
-              isDark ? "bg-[#1E1E1E] border-gray-700" : "bg-white border-gray-200"
+              isDark ? "bg-black border-neutral-800" : "bg-white border-neutral-200"
             }`}
           >
             <div className="flex items-center justify-between mb-4">
               <h2
                 className={`text-lg font-semibold ${
-                  isDark ? "text-white" : "text-gray-900"
+                  isDark ? "text-white" : "text-black"
                 }`}
               >
                 {t.readableView}
@@ -448,8 +448,8 @@ export default function Home() {
                 <span
                   className={`text-xs px-2 py-1 rounded ${
                     isDark
-                      ? "bg-green-500/20 text-green-400"
-                      : "bg-green-100 text-green-600"
+                      ? "bg-white/20 text-white"
+                      : "bg-black/10 text-black"
                   }`}
                 >
                   {t.editable || "Editable"}
@@ -458,7 +458,7 @@ export default function Home() {
             </div>
             <div
               className={`min-h-[400px] ${
-                isDark ? "text-gray-100" : "text-gray-900"
+                isDark ? "text-white" : "text-black"
               }`}
             >
               {parsedJson ? (
@@ -471,7 +471,7 @@ export default function Home() {
               ) : (
                 <div
                   className={`flex flex-col items-center justify-center h-[400px] ${
-                    isDark ? "text-gray-500" : "text-gray-400"
+                    isDark ? "text-neutral-500" : "text-neutral-400"
                   }`}
                 >
                   <FileJson className="w-12 h-12 mb-3 opacity-50" />

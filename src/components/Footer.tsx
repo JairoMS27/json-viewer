@@ -9,7 +9,7 @@ export default function Footer({ language }: FooterProps) {
   const t = translations[language as keyof typeof translations]
 
   return (
-    <footer className="mt-8 text-center text-sm text-gray-500">
+    <footer className="mt-8 text-center text-sm text-neutral-500">
       <p>
         {t.footer.built} ❤️ {t.footer.by}{' '}
         <Link href="https://github.com/JairoMS27" className="font-medium hover:underline">
